@@ -19,7 +19,7 @@
     /* Completeness */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
 
-    // "emitDecoratorMetadata": true,
-    // "experimentalDecorators": true
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true
   }
 }
