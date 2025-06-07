@@ -19,7 +19,12 @@
     /* Completeness */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */,
 
+    /* TypeORM config */
     "emitDecoratorMetadata": true,
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+
+    /* Resolution config */
+    "resolveJsonModule": true,
+    "moduleResolution": "node"
   }
 }
