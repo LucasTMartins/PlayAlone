@@ -17,7 +17,6 @@ export class Scene {
   name!: string;
 
   @ManyToOne(() => Place, (place) => place.scenes)
-  @Column()
   place!: Place;
 
   @ManyToMany(
