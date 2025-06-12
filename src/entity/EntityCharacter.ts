@@ -8,19 +8,21 @@ import {
 } from "typeorm";
 import { Item } from "./Item";
 import { Scene } from "./Scene";
-import { RationalEntityName } from "./RationalEntityName";
+import { EntityName } from "./EntityName";
 
 @Entity()
 export class EntityCharacter {
   @PrimaryGeneratedColumn('uuid')
   id!: string;
 
-  @ManyToOne(() => RationalEntityName, (rationalentityname) => rationalentityname.entitycharacters)
-  @Column()
-  name!: number;
+  @ManyToOne(
+    () => EntityName,
+    (entityName) => entityName.givenNameCharacters,
+  )
+  name!: EntityName;
 
-  @Column()
-  surname!: number;
+  @ManyToOne(() => EntityName, (entityName) => entityName.surnameCharacters)
+  surname!: EntityName;
 
   @Column()
   rational!: boolean;

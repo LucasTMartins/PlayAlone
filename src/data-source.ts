@@ -1,6 +1,10 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
 import { EntityCharacter } from "./entity/EntityCharacter";
+import { Item } from "./entity/Item";
+import { Scene } from "./entity/Scene";
+import { Place } from "./entity/Place";
+import { EntityName } from "./entity/EntityName";
 
 const dialect = process.env.DB_DIALECT ?? "mysql";
 
@@ -13,7 +17,13 @@ export const AppDataSource = new DataSource({
     database: process.env.DB_DATABASE,
     synchronize: false,
     logging: true,
-    entities: [EntityCharacter],
+    entities: [
+        EntityCharacter,
+        Item,
+        Scene,
+        Place,
+        EntityName,
+    ],
     subscribers: [],
     migrations: [],
 })
